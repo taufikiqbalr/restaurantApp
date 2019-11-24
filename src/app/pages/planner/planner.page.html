@@ -1,9 +1,43 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>planner</ion-title>
+    <ion-title>Planner</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="queryText" (ionChange)="updateSchedule()" placeholder="Search"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-list>
+
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'planner', item.name]">
+
+    <ion-label text-wrap>
+        <h1>{{ item.name }}</h1>
+        {{ item.address }}<br>
+        {{ item.locality }}<br>
+        <ion-item lines="none">
+          <ion-icon name="star" slot="start"></ion-icon>
+          <ion-label>{{ item.aggregate_rating }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="walk" slot="start"></ion-icon>
+          <ion-label>{{ item.distance }} km</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="contacts" slot="start"></ion-icon>
+          <ion-label>{{ item.votes }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="thumbs-up" slot="start"></ion-icon>
+          <ion-label>Nilai Total={{ item.weight }}</ion-label>
+        </ion-item>
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>

@@ -11,7 +11,7 @@
     <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'restaurants', item.name]">
 
     <ion-label text-wrap>
-        <h3>{{ item.name }}</h3>
+        <h1>{{ item.name }}</h1>
         {{ item.address }}<br>
         {{ item.locality }}<br>
         {{ item.aggregate_rating }}

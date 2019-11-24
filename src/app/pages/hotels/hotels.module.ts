@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
+import { IonicRatingModule } from "ionic4-rating";
+
 import { HotelsPageRoutingModule } from './hotels-routing.module';
 
 import { HotelsPage } from './hotels.page';
@@ -13,6 +15,7 @@ import { HotelsPage } from './hotels.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    IonicRatingModule,
     HotelsPageRoutingModule
   ],
   declarations: [HotelsPage]

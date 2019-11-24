@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class HotelService {
-  url = 'http://127.0.0.1:5000/hotel';
+  url = 'https://jalan-yuk.herokuapp.com/hotel';
 
   /**
    * Constructor of the Service with Dependency Injection

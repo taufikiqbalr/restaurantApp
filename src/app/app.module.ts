@@ -13,11 +13,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 
+import { IonicRatingModule } from 'ionic4-rating';
+
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    IonicRatingModule,
     FormsModule,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
