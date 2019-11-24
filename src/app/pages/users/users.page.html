@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>User</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+ 
+  <ion-list>
+ 
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'users', item.username]">
+    
+    <ion-label text-wrap>
+        <h3>{{ item.username }}</h3>
+        {{ item.password }}
+      </ion-label>
+ 
+    </ion-item>
+ 
+  </ion-list>
+ 
+</ion-content>

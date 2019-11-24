@@ -11,6 +11,12 @@ import { ScheduleModule } from '../schedule/schedule.module';
 import { SessionDetailModule } from '../session-detail/session-detail.module';
 import { SpeakerDetailModule } from '../speaker-detail/speaker-detail.module';
 import { SpeakerListModule } from '../speaker-list/speaker-list.module';
+import { UsersPageModule } from '../users/users.module';
+import { MoviesPageModule } from '../movies/movies.module';
+import { HotelsPageModule } from '../hotels/hotels.module';
+import { RecreationsPageModule } from '../recreations/recreations.module';
+import { PlannerPageModule } from '../planner/planner.module';
+import { RestaurantsPageModule } from '../restaurants/restaurants.module';
 
 @NgModule({
   imports: [
@@ -22,6 +28,12 @@ import { SpeakerListModule } from '../speaker-list/speaker-list.module';
     SessionDetailModule,
     SpeakerDetailModule,
     SpeakerListModule,
+    UsersPageModule,
+    MoviesPageModule,
+    RestaurantsPageModule,
+    HotelsPageModule,
+    RecreationsPageModule,
+    PlannerPageModule,
     TabsPageRoutingModule
   ],
   declarations: [

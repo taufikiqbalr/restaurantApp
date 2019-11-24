@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Restaurant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'restaurants', item.name]">
+
+    <ion-label text-wrap>
+        <h3>{{ item.name }}</h3>
+        {{ item.address }}<br>
+        {{ item.locality }}<br>
+        {{ item.aggregate_rating }}
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

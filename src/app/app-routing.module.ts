@@ -32,7 +32,35 @@ const routes: Routes = [
     path: 'tutorial',
     loadChildren: () => import('./pages/tutorial/tutorial.module').then(m => m.TutorialModule),
     canLoad: [CheckTutorial]
-  }
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./pages/users/users.module').then( m => m.UsersPageModule)
+  },
+  {
+    path: 'hotels',
+    loadChildren: () => import('./pages/hotels/hotels.module').then( m => m.HotelsPageModule)
+  },
+  {
+    path: 'restaurants',
+    loadChildren: () => import('./pages/restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
+  },
+  {
+    path: 'recreations',
+    loadChildren: () => import('./pages/recreations/recreations.module').then( m => m.RecreationsPageModule)
+  },
+  {
+    path: 'planner',
+    loadChildren: () => import('./pages/planner/planner.module').then( m => m.PlannerPageModule)
+  },
+  {
+    path: 'movies',
+    loadChildren: () => import('./pages/movies/movies.module').then( m => m.MoviesPageModule)
+  },
+  {
+    path: 'movies/:id',
+    loadChildren: () => import('./pages/movie-details/movie-details.module').then( m => m.MovieDetailsPageModule)
+  },
 ];
 
 @NgModule({

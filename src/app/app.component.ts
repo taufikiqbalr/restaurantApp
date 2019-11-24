@@ -27,7 +27,37 @@ export class AppComponent implements OnInit {
     {
       title: 'Speakers',
       url: '/app/tabs/speakers',
+      icon: 'microphone'
+    },
+    {
+      title: 'Users',
+      url: '/app/tabs/users',
       icon: 'contacts'
+    },
+    {
+      title: 'Hotels',
+      url: '/app/tabs/hotels',
+      icon: 'home'
+    },
+    {
+      title: 'Restaurants',
+      url: '/app/tabs/restaurants',
+      icon: 'pizza'
+    },
+    {
+      title: 'Recreationts',
+      url: '/app/tabs/recreations',
+      icon: 'sunny'
+    },
+    {
+      title: 'Planner',
+      url: '/app/tabs/planner',
+      icon: 'airplane'
+    },
+    {
+      title: 'Movies',
+      url: '/app/tabs/movies',
+      icon: 'videocam'
     },
     {
       title: 'Map',

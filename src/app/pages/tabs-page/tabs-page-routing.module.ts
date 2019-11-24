@@ -58,6 +58,60 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'users',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../users/users.module').then(m => m.UsersPageModule)
+          }
+        ]
+      },
+      {
+        path: 'hotels',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../hotels/hotels.module').then(m => m.HotelsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'restaurants',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../restaurants/restaurants.module').then(m => m.RestaurantsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'recreations',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../recreations/recreations.module').then(m => m.RecreationsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'planner',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../planner/planner.module').then(m => m.PlannerPageModule)
+          }
+        ]
+      },
+      {
+        path: 'movies',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../movies/movies.module').then(m => m.MoviesPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/app/tabs/schedule',
         pathMatch: 'full'
