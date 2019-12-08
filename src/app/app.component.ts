@@ -20,16 +20,6 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
-      title: 'Schedule',
-      url: '/app/tabs/schedule',
-      icon: 'calendar'
-    },
-    {
-      title: 'Speakers',
-      url: '/app/tabs/speakers',
-      icon: 'microphone'
-    },
-    {
       title: 'Users',
       url: '/app/tabs/users',
       icon: 'contacts'
@@ -58,11 +48,6 @@ export class AppComponent implements OnInit {
       title: 'Movies',
       url: '/app/tabs/movies',
       icon: 'videocam'
-    },
-    {
-      title: 'Map',
-      url: '/app/tabs/map',
-      icon: 'map'
     },
     {
       title: 'About',
@@ -143,7 +128,7 @@ export class AppComponent implements OnInit {
 
   logout() {
     this.userData.logout().then(() => {
-      return this.router.navigateByUrl('/app/tabs/schedule');
+      return this.router.navigateByUrl('/app/tabs/hotels');
     });
   }
 

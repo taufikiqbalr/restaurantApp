@@ -10,12 +10,18 @@ import { Observable } from 'rxjs';
 export class PlannerPage implements OnInit {
 
   results: Observable<any>;
+  searchTerm: string = '';
 
   constructor(private plannerService: PlannerService) {
     this.results = this.plannerService.getAll();
   }
 
   ngOnInit() {
+  }
+
+  searchChanged() {
+    // Call our service function which returns an Observable
+    this.results = this.plannerService.searchData(this.searchTerm);
   }
 
 }
